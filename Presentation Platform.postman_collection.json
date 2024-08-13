@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "c50f9bae-a0a8-4d3a-adcd-569551428306",
+		"name": "Presentation Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14459061"
+	},
+	"item": [
+		{
+			"name": "Create Presentation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"first_presentation\",\n    \"authors\": [\"author1\", \"author2\", \"author3\"],\n    \"dateOfPublishment\": \"2024-08-01\",\n    \"slides\": [\n        { \"title\": \"first_slide\", \"content\": \"first_slide_content\" },\n        { \"title\": \"second_slide\", \"content\": \"second_slide_content\" },\n        { \"title\": \"third_slide\", \"content\": \"third_slide_content\" }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/presentations",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presentations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Presentation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/presentations/first_presentation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presentations",
+						"first_presentation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Presentation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/presentations",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presentations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Slide",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"slide\": {\n        \"title\": \"new_slide\",\n        \"content\": \"new_slide_content\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/presentations/slides/first_presentation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presentations",
+						"slides",
+						"first_presentation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alter Slide",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"altered_slide\",\n    \"content\": \"altered_slide_content\",\n    \"_id\": \"66bb0bf5fd93abc000f86792\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/presentations/slides",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presentations",
+						"slides"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alter Authors List",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"authors\": [\"new_author\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/presentations/first_presentation/authors",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presentations",
+						"first_presentation",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Slide",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/presentations/slides/66bb0bf5fd93abc000f86791",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presentations",
+						"slides",
+						"66bb0bf5fd93abc000f86791"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Presentation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/presentations/first_presentation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"presentations",
+						"first_presentation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
