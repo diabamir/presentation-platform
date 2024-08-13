@@ -31,7 +31,7 @@ To run this project:
 
 1. **Download the project files**: Clone the repository or download the project as a ZIP file.
 2. **Import project files into a code editor**: Open the project folder in your preferred code editor (e.g., VS Code).
-3. **Import the Postman collection**: Import the `Presentation Platform.postman_collection.json` file into Postman to easily test the API endpoints.
+3. **Import the Postman collection**: Import the `Presentation Platform.postman_collection.json` file into `Postman` to easily test the API endpoints.
 4. **Install dependencies**: In the terminal, navigate to the project directory and run:
    ```bash
    npm install
